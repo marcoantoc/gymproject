@@ -165,4 +165,73 @@ const sendEmail =(e) =>{
 }
 
 contactForm.addEventListener('submit', sendEmail)
+// saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+function openModal(id) {
+    document.getElementById(id).classList.add('show');
+}
+
+function closeModal(id) {
+    document.getElementById(id).classList.remove('show');
+}
+
+document.getElementById('login-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    closeModal('login-modal');
+    
+});
+
+document.getElementById('register-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    closeModal('register-modal');
+    
+});
+
+// inisio de sesion aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+// Función para verificar el estado de autenticación al cargar la página
+function checkAuth() {
+    const isAuthenticated = localStorage.getItem('isAuthenticated');
+    const loginBtn = document.getElementById('login-btn');
+    const registerBtn = document.getElementById('register-btn');
+    const profileBtn = document.getElementById('profile-btn');
+
+    if (isAuthenticated === 'true') {
+        // Usuario autenticado
+        loginBtn.classList.add('hidden');
+        registerBtn.classList.add('hidden');
+        profileBtn.classList.remove('hidden');
+    } else {
+        // Usuario no autenticado
+        loginBtn.classList.remove('hidden');
+        registerBtn.classList.remove('hidden');
+        profileBtn.classList.add('hidden');
+    }
+}
+
+// Función para manejar el inicio de sesión
+document.getElementById('login-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Simular autenticación exitosa
+    localStorage.setItem('isAuthenticated', 'true');
+    
+    checkAuth();
+    closeModal('login-modal');
+});
+
+// Función para manejar el registro
+document.getElementById('register-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Simular registro exitoso
+    localStorage.setItem('isAuthenticated', 'true');
+    
+    checkAuth();
+    closeModal('register-modal');
+});
+
+// Llamar a checkAuth al cargar la página
+window.onload = checkAuth;
+function logout() {
+    localStorage.removeItem('isAuthenticated');
+    
+    window.location.href = 'index.html'; // Redirige al inicio
+}
 
