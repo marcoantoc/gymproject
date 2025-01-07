@@ -37,8 +37,19 @@
                         <a href="#pricing" class="nav__link">Precios</a>
                     </li>
                     <div class="nav__link">
-                        <a href="#footer" class="button nav__button">Registrate ahora</a>
+                        <a href="#footer" class="nav__link">Suscribete</a>
                     </div>
+                    <div class="nav__buttons">
+                      
+                      <a id="login-btn" class="button nav__button" onclick="openModal('login-modal')">Iniciar Sesión</a>
+                      
+                      
+                      <a id="register-btn"  class="button nav__button" onclick="openModal('register-modal')">Registrarse</a>
+                      
+                      <button id="profile-btn" onclick="window.location.href='profile.html'" class="button">Perfil</button>
+
+                  </div>
+                  
 
 
                 </ul>
@@ -355,6 +366,44 @@
                   </div>
             </section>
         </main>
+        <div id="login-modal" class="modal">
+          <div class="modal__content">
+              <span class="modal__close" onclick="closeModal('login-modal')">&times;</span>
+              <h2 class="modal__title">Iniciar Sesión</h2>
+              <form id="login-form" class="form">
+                  <label for="login-email" class="form__label">Correo Electrónico</label>
+                  <input type="email" id="login-email" class="form__input" placeholder="ejemplo@correo.com" required>
+                  
+                  <label for="login-password" class="form__label">Contraseña</label>
+                  <input type="password" id="login-password" class="form__input" placeholder="Contraseña" required>
+                  
+                  <button type="submit" onclick="window.location.href='profile.html'"  class="button">Iniciar Sesión</button>
+              </form>
+          </div>
+      </div>
+      <div id="register-modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close" onclick="closeModal('register-modal')">&times;</span>
+            <h2 class="modal__title">Registrarse</h2>
+            <form id="register-form" class="form">
+                <label for="register-name" class="form__label">Nombre Completo</label>
+                <input type="text" id="register-name" class="form__input" placeholder="Nombre" required>
+                
+                <label for="register-email" class="form__label">Correo Electrónico</label>
+                <input type="email" id="register-email" class="form__input" placeholder="ejemplo@correo.com" required>
+                
+                <label for="register-password" class="form__label">Contraseña</label>
+                <input type="password" id="register-password" class="form__input" placeholder="Contraseña" required>
+                
+                <button type="submit" onclick="window.location.href='profile.html'"  class="button">Registrarse</button>
+                
+            </form>
+        </div>
+    </div>
+
+  
+    
+      
 
         <!--==================== FOOTER ====================-->
         <footer class="footer section" id="footer">
