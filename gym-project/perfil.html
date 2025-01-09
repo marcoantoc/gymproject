@@ -6,115 +6,114 @@
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Perfil del Usuario</title>
+    <title>Perfil Personal</title>
+
 </head>
 <body>
-    <!-- Encabezado -->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav__logo">
-                <img src="assets/img/logo-nav.png" alt="logo">PEPES GIMNASIO
-            </a>
-            <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="index.html" class="nav__link">Inicio</a>
-                </li>   
-                <li class="nav__item">
-                    <button onclick="logout()" class="button">Cerrar Sesión</button>
-
-                </li>
-            </ul>
-            <div class="nav__close" id="nav-close">
-                <i class="ri-close-line"></i>
-            </div>
-           </div>
-           <div class="nav__toggle" id="nav-toggle">
-            <i class="ri-menu-line"></i>
-
-           </div>
-        </nav>
-    </header>
-
-    <!-- Sección de perfil -->
-    <main class="profile">
-        <div class="profile__container container">
-            <h2 class="section__title_prof">Bienvenido: Nombre_Usuario
-            <div class="profile__images">
-                <img src="assets/img/profile-img.png" alt="profile image" class="profile_img">
-            </div>
-            </h2><br>
-            <h2 class="section__subtitle_prof">Por favor llena los datos para continuar con el registro:</h2><br>
-            <div class="profile__data">
-                <p><strong>Nombres Completos:</strong> <span id="user-name"></span><input type="text" class="profile__input" id="nombre" name="nombre"></p>
-                <p><strong>Edad:</strong> <span id="user-height"></span> <input type="number" placeholder="Años" class="profile__input" id="edad" name="edad" min="0"></p>
-                <p><strong>Sexo:</strong> <span id="user-height"></span> <select class="profile__input" id="sexo" name="sexo">
-                    <option value="subir">Masculino</option>
-                    <option value="bajar">Femenino</option>
-                </select>
-                <p><strong>Cedula:</strong> <span id="user-height"></span> <input type="number"class="profile__input" id="cedula" name="edad" min="0"></p>
-                <p><strong>Telefono:</strong> <span id="user-weight"></span><input type="tel" class="profile__input" id="telefono" name="telefono"></p>
-                
-                <p><strong>Numero de Emergencia:</strong> <span id="user-bmi"></span><input type="tel" class="profile__input" id="telefono" name="telefono"></p>
-            </div><br>
-            <h2 class="section__subtitle_prof">Información Física:</h2><br>
-            <div class="profile__data">
-                <p><strong>Peso actual (Kg):</strong> <span id="user-name"></span><input type="number" placeholder="Kilogramos" class="profile__input" id="Peso" name="Peso" min="0"></p>
-                <p><strong>Objetivo:</strong> <span id="user-height"></span> <select class="profile__input" id="objetivo" name="objetivo">
-                    <option value="subir">Bajar</option>
-                    <option value="bajar">Subir</option>
-                </select>
-                <p><strong>Altura (cm):</strong> <span id="user-weight"></span><input type="number" placeholder="Centimetros" class="profile__input" id="altura" name="altura" min="0"></p>
-                <p><strong>Indice de Masa Corporal (IMC):</strong> <span id="user-bmi"></span><input type="tel" class="profile__input" id="telefono" name="telefono"></p>
-            </div><br>
-            <h2 class="section__subtitle_prof">Cuestionario previo de salud:</h2><br>
-            <div class="profile__data">
-                <p><strong>¿Ha tenido o tiene alguna lesión (ósea)?:</strong> <span id="user-name"></span><select class="profile__input" id="Cuestionario" name="Cuestionario">
-                    <option value="subir">Si</option>
-                    <option value="bajar">No</option>
-                </select>
-                <p><strong>¿Ha tenido alguna enfermedad muscular?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
-                    <option value="subir">Si</option>
-                    <option value="bajar">No</option>
-                </select>
-                <p><strong>¿Padece alguna enfermedad cardiovascular?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
-                    <option value="subir">Si</option>
-                    <option value="bajar">No</option>
-                </select>
-                <p><strong>¿Padece alguna alergia al realizar ejercicio físico?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
-                    <option value="subir">Si</option>
-                    <option value="bajar">No</option>
-                </select>
-                <p><strong>¿Fuma o bebe bebidas alcohólicas?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
-                    <option value="subir">Si</option>
-                    <option value="bajar">No</option>
-                </select>
-                <p><strong>¿Padece gastritis o anemia?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
-                    <option value="subir">Si</option>
-                    <option value="bajar">No</option>
-                </select>
-                <p><strong>¿Ha practicado habitualmente alguna actividad deportiva?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
-                    <option value="subir">Si</option>
-                    <option value="bajar">No</option>
-                </select>
-                <p><strong>¿Ha estado inscrito en algún gimnasio o instalación deportiva?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
-                    <option value="subir">Si</option>
-                    <option value="bajar">No</option>
-                </select>
-
-
-            </div>
-            <button onclick="logout()" class="button">Completar Registro</button>
-        </div>
-        
-    </main>
-
-    <script>
-        function logout() {
+        <!-- Encabezado -->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="index.html" class="nav__logo">
+                    <img src="assets/img/logo-nav.png" alt="logo">PEPES GIMNASIO
+                </a>
+                <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Inicio</a>
+                    </li>   
+                    <li class="nav__item">
+                        <button onclick="logout()" class="button">Cerrar Sesión</button>
+    
+                    </li>
+                </ul>
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+               </div>
+               <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+    
+               </div>
+            </nav>
+        </header>
+    <div class="container">
+        <div class="section__perfil">
             
-            window.location.href = 'index.html';
-        }
-    </script>
+            <div class="profile-photo">
+                <img src="assets/img/profile-img.png" alt="Foto de perfil">
+            </div>
+            <div class="personal-data">
+                <h2>Datos Personales</h2>
+                <p>Nombre: [Nombre del Usuario]</p>
+                <p>Email: [email@example.com]</p>
+                <p>Teléfono: [123-456-7890]</p>
+                <button onclick="logout()" class="button">Editar</button>
+            </div>
+            <div class="subscription-status">
+                <h2>Estado de Suscripción</h2>
+                <p>Plan: [Nombre del Plan]</p>
+                <p>Fecha de Renovación: [dd/mm/yyyy]</p>
+                <button onclick="logout()" class="button">Configurar</button>
+            </div>
+        
+        </div>
+
+        <div class="table-container">
+            <h2>Seguimiento Anual</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mes</th>
+                        <th>Altura (cm)</th>
+                        <th>Peso (kg)</th>
+                        <th>Brazos (cm)</th>
+                        <th>Pecho (cm)</th>
+                        <th>Cintura (cm)</th>
+                        <th>Observaciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Primer Mes</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Segundo Mes</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Tercer Mes</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- Agrega más filas aquí para cada mes -->
+                    <tr>
+                        <td>Doceavo Mes</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
