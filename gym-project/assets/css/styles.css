@@ -849,7 +849,9 @@ img {
   .footer__content{
     grid-template-columns: 1fr;
   }
+  
 }
+
 
 /* For medium devices */
 @media screen and (min-width: 768px){
@@ -1171,11 +1173,13 @@ img {
 }
 
 /* Perfil de usuario */
+
 .profile {
   padding: 4rem 0;
   background-color: var(--body-color);
   color: var(--title-color);
 }
+
 
 .profile__data p {
   font-size: var(--normal-font-size);
@@ -1208,6 +1212,24 @@ img {
   color: var(--title-color);
   text-align: center;
 }
+.profile__input{
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 56px 20px 24px;
+    outline: none;
+    border: none;
+    color: var(--text-color);
+    position: relative;
+    border: 2px solid var(--first-color-light);
+}
+.profile__input option{
+  background-color: var(--body-color);
+  
+  
+}
+.profile__input #sexo option:hover {
+  background-color: var(--first-color-light);
+}
 
 .profile__data p {
   font-size: var(--normal-font-size);
@@ -1226,8 +1248,10 @@ img {
 }
 .profile__data{
   background-color: hsla(79, 6%, 64%, .07);
-  display: grid
-;
+  text-align: left;
+  
+  
+  
 }
 .profile__images{
   display: inline;
@@ -1245,12 +1269,12 @@ img {
 @media (max-width: 774px) {
   .profile__container {
       flex-direction: column; /* Cambia la disposición a vertical */
-      align-items: center; /* Centra los elementos */
+      align-items: center; 
   }
 
   .profile__images {
-      margin-top: 20px; /* Espacio entre el texto y la imagen */
-      text-align: center; /* Imagen centrada */
+      margin-top: 20px; 
+      text-align: center; 
       display: inline;
       position: relative;
       margin: auto;
@@ -1339,5 +1363,3 @@ img {
     min-width: 600px; /* Define un ancho mínimo para la tabla si es necesario */
   }
 }
-
-
