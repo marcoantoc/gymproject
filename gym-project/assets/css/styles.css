@@ -1256,5 +1256,88 @@ img {
       margin: auto;
   }
 }
+/* perfil .......................................................................... */
+.section__perfil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem; /* Espaciado entre elementos */
+  padding: 1rem;
+  margin-top: 5rem; /* Espaciado entre el header y la sección */
+}
+
+.section__perfil > div {
+  flex: 1; /* Todos los elementos ocupan el mismo espacio */
+  min-height: 200px; /* Establece una altura mínima igual para todos */
+  text-align: center; /* Centra horizontalmente el texto */
+  display: flex; /* Utiliza flexbox para centrar verticalmente */
+  flex-direction: column; /* Asegura que el contenido esté en columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  border: 1px solid var(--first-color-light);; /* Agrega un borde */
+  padding: 1rem; /* Espaciado interno */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: Sombra */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: hsla(79, 6%, 64%, .07); /* Opcional: Fondo */
+}
+
+.profile-photo img {
+  max-width: 100%; /* Imagen responsiva */
+  max-height: 100px; /* Limita la altura de la imagen */
+  border-radius: 50%; /* Hace la imagen redonda */
+}
+
+@media (max-width: 768px) {
+  .section__perfil {
+      flex-direction: column; /* Cambia a disposición vertical */
+      align-items: center; /* Centra los cuadros */
+      gap: 1rem; /* Espaciado entre los cuadros */
+      margin-top: 5rem; /* Espaciado entre el header y la sección */
+  }
+
+  .section__perfil > div {
+      width: 90%; /* Ancho fijo uniforme del 90% de la pantalla */
+      max-width: 400px; /* Opcional: Límite máximo de ancho */
+      min-height: 200px; /* Altura mínima igual */
+  }
+}
+.table-container {
+  width: 100%; /* Ajusta el ancho del contenedor a la pantalla */
+  overflow-x: auto; /* Permite el desplazamiento horizontal para tablas grandes */
+  margin: 1rem auto; /* Centra el contenedor y agrega espacio arriba y abajo */
+  padding: 1rem; /* Espaciado interno */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra */
+  border-radius: 8px; /* Bordes redondeados */
+  background-color: hsla(79, 6%, 64%, .07); /* Opcional: fondo */
+}
+
+.table-container table {
+  width: 100%; /* Asegura que la tabla se ajuste al contenedor */
+  border-collapse: collapse; /* Estilo más compacto */
+}
+
+.table-container th,
+.table-container td {
+  text-align: center; /* Centra el texto dentro de las celdas */
+  padding: 0.5rem; /* Espaciado interno */
+  border: 1px solid var(--first-color-light); /* Borde de las celdas */
+  word-wrap: break-word; /* Permite el ajuste de texto largo */
+}
+
+.table-container th {
+  background-color: var(--first-color-gray); /* Fondo para los encabezados */
+  color: white; /* Color del texto */
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    width: 100%; /* Asegura que el contenedor no exceda el ancho de la pantalla */
+    overflow-x: auto; /* Permite desplazamiento horizontal si la tabla es grande */
+  }
+
+  .table-container table {
+    min-width: 600px; /* Define un ancho mínimo para la tabla si es necesario */
+  }
+}
 
 
