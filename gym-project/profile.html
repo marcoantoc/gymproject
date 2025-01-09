@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Encabezado -->
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav container">
             <a href="index.html" class="nav__logo">
                 <img src="assets/img/logo-nav.png" alt="logo">PEPES GIMNASIO
@@ -43,16 +43,70 @@
             <div class="profile__images">
                 <img src="assets/img/profile-img.png" alt="profile image" class="profile_img">
             </div>
-            </h2>
-            <h2 class="section__subtitle_prof">Datos Personales</h2>
+            </h2><br>
+            <h2 class="section__subtitle_prof">Por favor llena los datos para continuar con el registro:</h2><br>
             <div class="profile__data">
-                <p><strong>Nombre:</strong> <span id="user-name">Nombre_Usuario</span></p>
-                <p><strong>Altura:</strong> <span id="user-height">175</span> cm</p>
-                <p><strong>Peso:</strong> <span id="user-weight">70</span> kg</p>
-                <p><strong>IMC:</strong> <span id="user-bmi">22.86</span></p>
+                <p><strong>Nombres Completos:</strong> <span id="user-name"></span><input type="text" class="profile__input" id="nombre" name="nombre"></p>
+                <p><strong>Edad:</strong> <span id="user-height"></span> <input type="number" placeholder="Años" class="profile__input" id="edad" name="edad" min="0"></p>
+                <p><strong>Sexo:</strong> <span id="user-height"></span> <select class="profile__input" id="sexo" name="sexo">
+                    <option value="subir">Masculino</option>
+                    <option value="bajar">Femenino</option>
+                </select>
+                <p><strong>Cedula:</strong> <span id="user-height"></span> <input type="number"class="profile__input" id="cedula" name="edad" min="0"></p>
+                <p><strong>Telefono:</strong> <span id="user-weight"></span><input type="tel" class="profile__input" id="telefono" name="telefono"></p>
+                
+                <p><strong>Numero de Emergencia:</strong> <span id="user-bmi"></span><input type="tel" class="profile__input" id="telefono" name="telefono"></p>
+            </div><br>
+            <h2 class="section__subtitle_prof">Información Física:</h2><br>
+            <div class="profile__data">
+                <p><strong>Peso actual (Kg):</strong> <span id="user-name"></span><input type="number" placeholder="Kilogramos" class="profile__input" id="Peso" name="Peso" min="0"></p>
+                <p><strong>Objetivo:</strong> <span id="user-height"></span> <select class="profile__input" id="objetivo" name="objetivo">
+                    <option value="subir">Bajar</option>
+                    <option value="bajar">Subir</option>
+                </select>
+                <p><strong>Altura (cm):</strong> <span id="user-weight"></span><input type="number" placeholder="Centimetros" class="profile__input" id="altura" name="altura" min="0"></p>
+                <p><strong>Indice de Masa Corporal (IMC):</strong> <span id="user-bmi"></span><input type="tel" class="profile__input" id="telefono" name="telefono"></p>
+            </div><br>
+            <h2 class="section__subtitle_prof">Cuestionario previo de salud:</h2><br>
+            <div class="profile__data">
+                <p><strong>¿Ha tenido o tiene alguna lesión (ósea)?:</strong> <span id="user-name"></span><select class="profile__input" id="Cuestionario" name="Cuestionario">
+                    <option value="subir">Si</option>
+                    <option value="bajar">No</option>
+                </select>
+                <p><strong>¿Ha tenido alguna enfermedad muscular?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
+                    <option value="subir">Si</option>
+                    <option value="bajar">No</option>
+                </select>
+                <p><strong>¿Padece alguna enfermedad cardiovascular?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
+                    <option value="subir">Si</option>
+                    <option value="bajar">No</option>
+                </select>
+                <p><strong>¿Padece alguna alergia al realizar ejercicio físico?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
+                    <option value="subir">Si</option>
+                    <option value="bajar">No</option>
+                </select>
+                <p><strong>¿Fuma o bebe bebidas alcohólicas?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
+                    <option value="subir">Si</option>
+                    <option value="bajar">No</option>
+                </select>
+                <p><strong>¿Padece gastritis o anemia?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
+                    <option value="subir">Si</option>
+                    <option value="bajar">No</option>
+                </select>
+                <p><strong>¿Ha practicado habitualmente alguna actividad deportiva?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
+                    <option value="subir">Si</option>
+                    <option value="bajar">No</option>
+                </select>
+                <p><strong>¿Ha estado inscrito en algún gimnasio o instalación deportiva?:</strong> <span id="user-height"></span> <select class="profile__input" id="Cuestionario" name="Cuestionario">
+                    <option value="subir">Si</option>
+                    <option value="bajar">No</option>
+                </select>
+
+
             </div>
-            
+            <button onclick="logout()" class="button">Completar Registro</button>
         </div>
+        
     </main>
 
     <script>
